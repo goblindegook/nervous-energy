@@ -1,0 +1,77 @@
+{
+  "name": "nervous-energy",
+  "version": "1.0.0",
+  "description": "Nervous Energy",
+  "main": "./src/index.html",
+  "repository": "git@github.com:goblindegook/nervous-energy.git",
+  "author": "Luis Rodrigues <hello@goblindegook.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "develop": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf dist",
+    "format": "prettier --write '{src,test}/**/*.{ts,tsx}'",
+    "lint": "tslint '{src,test}/**/*.{ts,tsx}'",
+    "prebuild": "yarn test",
+    "pretest": "yarn lint",
+    "watch": "jest --watch",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/ramda": "^0.25.21",
+    "@types/react": "^16.3.5",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-helmet": "^5.0.5",
+    "@types/react-router": "^4.0.23",
+    "@types/react-router-dom": "^4.2.6",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
+    "parcel-bundler": "^1.7.0",
+    "prettier": "^1.11.1",
+    "react-testing-library": "^1.9.5",
+    "ts-jest": "^22.4.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-config-standard": "^7.0.0",
+    "tslint-immutable": "^4.5.3",
+    "tslint-react": "^3.5.1",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "emotion": "^9.1.1",
+    "normalize.css": "^8.0.0",
+    "ramda": "^0.25.0",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-helmet": "^5.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|sass|scss|styl)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "\\.(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ]
+  }
+}
